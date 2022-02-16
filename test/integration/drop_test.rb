@@ -113,6 +113,7 @@ class DropsTest < Minitest::Test
   end
 
   def test_rendering_raises_on_tainted_attr
+    skip "taint mode deprecated"
     with_taint_mode(:error) do
       tpl = Liquid::Template.parse('{{ product.user_input }}')
       assert_raises TaintedError do
@@ -122,6 +123,7 @@ class DropsTest < Minitest::Test
   end
 
   def test_rendering_warns_on_tainted_attr
+    skip "taint mode deprecated"
     with_taint_mode(:warn) do
       tpl = Liquid::Template.parse('{{ product.user_input }}')
       tpl.render!('product' => ProductDrop.new)
