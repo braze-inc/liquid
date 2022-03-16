@@ -3,7 +3,7 @@
 require 'rake'
 require 'rake/testtask'
 $LOAD_PATH.unshift(File.expand_path("../lib", __FILE__))
-require "liquid/version"
+require "liquid5/version"
 
 task(default: [:test, :rubocop])
 
@@ -57,18 +57,18 @@ end
 
 task(gem: :build)
 task :build do
-  system "gem build liquid.gemspec"
+  system "gem build liquid5.gemspec"
 end
 
 task install: :build do
-  system "gem install liquid-#{Liquid::VERSION}.gem"
+  system "gem install liquid-#{Liquid5::VERSION}.gem"
 end
 
 task release: :build do
-  system "git tag -a v#{Liquid::VERSION} -m 'Tagging #{Liquid::VERSION}'"
+  system "git tag -a v#{Liquid5::VERSION} -m 'Tagging #{Liquid5::VERSION}'"
   system "git push --tags"
-  system "gem push liquid-#{Liquid::VERSION}.gem"
-  system "rm liquid-#{Liquid::VERSION}.gem"
+  system "gem push liquid-#{Liquid5::VERSION}.gem"
+  system "rm liquid-#{Liquid5::VERSION}.gem"
 end
 
 namespace :benchmark do
