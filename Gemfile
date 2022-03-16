@@ -22,6 +22,7 @@ group :test do
   gem 'rubocop-shopify', '~> 1.0.7', require: false
   gem 'rubocop-performance', require: false
 
+  # Consider forking liquid-c as well for performance gains.  Omitting this at this time.
   # platform :mri, :truffleruby do
   #   gem 'liquid-c', github: 'Shopify/liquid-c', ref: 'master'
   # end

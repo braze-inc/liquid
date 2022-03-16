@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "liquid5/version"
 
 Gem::Specification.new do |s|
-  s.name        = "liquid"
+  s.name        = "liquid5"
   s.version     = Liquid5::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "A secure, non-evaling end user template engine with aesthetic markup."

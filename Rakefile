@@ -57,7 +57,7 @@ end
 
 task(gem: :build)
 task :build do
-  system "gem build liquid.gemspec"
+  system "gem build liquid5.gemspec"
 end
 
 task install: :build do
