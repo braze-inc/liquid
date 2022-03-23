@@ -1,6 +1,10 @@
 [![Build Status](https://api.travis-ci.org/Shopify/liquid.svg?branch=master)](http://travis-ci.org/Shopify/liquid)
 [![Inline docs](http://inch-ci.org/github/Shopify/liquid.svg?branch=master)](http://inch-ci.org/github/Shopify/liquid)
 
+# Braze Fork
+
+This version of liquid 3 updates test dependencies and removes instances of `BigDecimal.new` for compatibilty with Ruby 2.7+
+
 # Liquid template engine
 
 * [Contributing guidelines](CONTRIBUTING.md)
